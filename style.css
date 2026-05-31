@@ -1,0 +1,39 @@
+body {
+  background: #800000; /* merah tua */
+  color: gold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.menu {
+  margin: 20px;
+}
+
+.output {
+  margin-top: 30px;
+  border: 5px solid gold;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  position: relative;
+  display: inline-block;
+}
+
+img {
+  max-width: 78%;
+  border: 3px solid gold;
+  border-radius: 8px;
+}
+
+.tanggal-overlay {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(120,0,0,0.8);
+  color: gold;
+  padding: 2px 20px;
+  border: 2px solid gold;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 15px;
+}
