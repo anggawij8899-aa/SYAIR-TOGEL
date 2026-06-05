@@ -4,7 +4,6 @@ function getTanggalHariIni() {
   return now.toLocaleDateString('id-ID', options);
 }
 
-// generate angka main (5 digit unik)
 function generateAngkaMain() {
   let angka = [];
   while (angka.length < 5) {
@@ -14,14 +13,13 @@ function generateAngkaMain() {
   return angka.join(" ");
 }
 
-// generate BBFS (7 digit unik)
 function generateBBFS() {
   let angka = [];
   while (angka.length < 7) {
     let num = Math.floor(Math.random() * 10);
     if (!angka.includes(num)) angka.push(num);
   }
-  return angka.join("");
+  return angka.join(" ");
 }
 
 function tampilkan() {
@@ -35,8 +33,14 @@ function tampilkan() {
     <div style="position:relative; display:inline-block;">
       <img src="${link}" alt="Gambar Prediksi">
       <div class="tanggal-overlay">${tanggal}</div>
-      <div class="angka-main-overlay">Angka Main: ${angkaMain}</div>
-      <div class="bbfs-overlay">BBFS: ${bbfs}</div>
+      <div class="angka-main-overlay">
+        <div class="label">Angka Main:</div>
+        <div class="angka">${angkaMain}</div>
+      </div>
+      <div class="bbfs-overlay">
+        <div class="label">BBFS:</div>
+        <div class="angka">${bbfs}</div>
+      </div>
     </div>
   `;
 }
